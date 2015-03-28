@@ -20,6 +20,7 @@ func main() {
 		// will listen for message to process ending in newline (\n)
 		message, err := bufio.NewReader(conn).ReadString('\n')
 		
+		// exit if any exception occurs
 		if err != nil {
 			break
 		}
