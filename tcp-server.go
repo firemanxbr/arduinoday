@@ -18,8 +18,11 @@ func main() {
 	// run loop forever (or until ctrl-c)
 	for {
 		// will listen for message to process ending in newline (\n)
-		message, _ := bufio.NewReader(conn).ReadString('\n')
-
+		message, err := bufio.NewReader(conn).ReadString('\n')
+		
+		if err != nil {
+			break
+		}
 		// output message received
 		fmt.Print("Message Received:", string(message))
 
