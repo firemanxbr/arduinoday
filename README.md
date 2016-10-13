@@ -1,2 +1,2 @@
 # arduinoday
-Go lang examples TCP and UDP services
+Golang examples in TCP and UDP services
